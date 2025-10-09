@@ -8,11 +8,10 @@
     },
     "resources": [
         {
-            "id": "[concat(resourceId('Microsoft.OperationalInsights/workspaces/providers', parameters('workspace'), 'Microsoft.SecurityInsights'),'/alertRules/74a23c80-4ac7-4b86-a399-9a1fafc90b23')]",
             "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/74a23c80-4ac7-4b86-a399-9a1fafc90b23')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "kind": "Scheduled",
-            "apiVersion": "2023-12-01-preview",
+            "apiVersion": "2023-02-01",
             "properties": {
                 "displayName": "MXDR365 - NSG Changes",
                 "description": "This query looks at changes made to network security groups in Azure, showing the resource that was changed and who made the change",
