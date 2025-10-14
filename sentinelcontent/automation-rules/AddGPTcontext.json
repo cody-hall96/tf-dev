@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspace": {
+            "type": "String"
+        }
+    },
+    "resources": [
+        {
+            "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/ed48d08f-6781-4756-a177-39c0b0385df2')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/AutomationRules",
+            "apiVersion": "2024-04-01-preview",
+            "properties": {
+                "displayName": "Add GPT  Context",
+                "order": 2,
+                "triggeringLogic": {
+                    "isEnabled": false,
+                    "triggersOn": "Incidents",
+                    "triggersWhen": "Created",
+                    "conditions": []
+                },
+                "actions": [
+                    {
+                        "order": 1,
+                        "actionType": "RunPlaybook",
+                        "actionConfiguration": {
+                            "logicAppResourceId": "/subscriptions/32e993b8-ebcd-4bca-98e7-23b6d3639b38/resourceGroups/Kahs-Security/providers/Microsoft.Logic/workflows/6MDMChatGPT",
+                            "tenantId": "73bf1773-9ee6-488f-b898-33c4fbac0041"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
