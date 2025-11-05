@@ -1,5 +1,6 @@
 FileName, CommitSha
-sentinelcontent/workbooks/patriot-mxdr-performance.json,510f47b2b137cad744eaabdd318f93ac27bcaf2d
 sentinelcontent/automation-rules/AddGPTcontext.json,9a22c86a7fdbd4fa08fc83d5f3b4af0f5b044298
+sentinelcontent/analytic-rules/NSG - Changes2.bicep,bc58b6319285151a73a3e26b9a44a5f946f7d855
+sentinelcontent/workbooks/patriot-mxdr-performance.json,510f47b2b137cad744eaabdd318f93ac27bcaf2d
 sentinelcontent/analytic-rules/MXDR365 -  Detecting Windows Side-Loading DLL attacks.json,d416935d2397bfd205e8b5f7b96f5aba198b025b
 
