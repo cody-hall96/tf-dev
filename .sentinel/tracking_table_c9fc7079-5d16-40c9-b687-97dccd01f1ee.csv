@@ -1,16 +1,16 @@
 FileName, CommitSha
-sentinelcontent/analytic-rules/MXDR365 - Active Credential Harvesting - Stealer Malware Detection.bicep,a6cad5efaf4a3c1ae5dcbba04b9e7ea891668b38
-sentinelcontent/analytic-rules/MXDR365 - 7-ZIP to prepare data for exfiltration.bicep,e46b55f9ec4a04247a3a02a5c6e1c60d42159cac
-sentinelcontent/analytic-rules/MXDR365 - Advanced Multi-Stage Discovery Operations Detection.bicep,d016ffc464cdb19bc4bd03a971845c74c840ef00
-sentinelcontent/analytic-rules/MXDR365 -  Detecting Windows Side-Loading DLL attacks.bicep,0017739260a750d510cc2af898f42a6251922756
-sentinelcontent/workbooks/patriot-mxdr-performance.json,510f47b2b137cad744eaabdd318f93ac27bcaf2d
-sentinelcontent/analytic-rules/MXDR365 -  Detecting Windows Side-Loading DLL attacks.json,d416935d2397bfd205e8b5f7b96f5aba198b025b
-sentinelcontent/analytic-rules/MXDR365 - AAD User Risk Events Leaked Credentials.bicep,9a0534470c3b57ab5b92995688b5a6062f2d72fa
 sentinelcontent/analytic-rules/MXDR365  - Keylogger detection.bicep,00a7adf35942b16eb63eb59862e81fa8ee6c1627
-sentinelcontent/analytic-rules/MXDR365 - Account Authentication Anomaly_ Significant Volume Increase with High Failure Rate.bicep,1f3dbbf02e207a81137b9591af2082588d7a37cc
-sentinelcontent/analytic-rules/MXDR365 -  LNK File Creation with Abusive Commands Detection.bicep,7bbde1b169df490236793a4c4d852f90f2fab52e
-sentinelcontent/analytic-rules/MXDR365 - Alpha Spider Ransomware.bicep,b20469ab1b7936424bdea266b72e0908da83ec7e
+sentinelcontent/workbooks/patriot-mxdr-performance.json,510f47b2b137cad744eaabdd318f93ac27bcaf2d
 sentinelcontent/automation-rules/AddGPTcontext.json,9a22c86a7fdbd4fa08fc83d5f3b4af0f5b044298
-sentinelcontent/analytic-rules/MXDR365 -  Supper RAT - Suspicious Rundll32 Execution - Analytic Rule.bicep,7a639008604ff31af8fbad2a84425f41c0c07a0f
+sentinelcontent/analytic-rules/MXDR365 - Alpha Spider Ransomware.bicep,b20469ab1b7936424bdea266b72e0908da83ec7e
+sentinelcontent/analytic-rules/MXDR365 - Active Credential Harvesting - Stealer Malware Detection.bicep,a6cad5efaf4a3c1ae5dcbba04b9e7ea891668b38
 sentinelcontent/analytic-rules/NSG - Changes2.bicep,bc58b6319285151a73a3e26b9a44a5f946f7d855
+sentinelcontent/analytic-rules/MXDR365 -  Supper RAT - Suspicious Rundll32 Execution - Analytic Rule.bicep,7a639008604ff31af8fbad2a84425f41c0c07a0f
+sentinelcontent/analytic-rules/MXDR365 - 7-ZIP to prepare data for exfiltration.bicep,e46b55f9ec4a04247a3a02a5c6e1c60d42159cac
+sentinelcontent/analytic-rules/MXDR365 -  Detecting Windows Side-Loading DLL attacks.json,d416935d2397bfd205e8b5f7b96f5aba198b025b
+sentinelcontent/analytic-rules/MXDR365 -  LNK File Creation with Abusive Commands Detection.bicep,7bbde1b169df490236793a4c4d852f90f2fab52e
+sentinelcontent/analytic-rules/MXDR365 -  Detecting Windows Side-Loading DLL attacks.bicep,0017739260a750d510cc2af898f42a6251922756
+sentinelcontent/analytic-rules/MXDR365 - AAD User Risk Events Leaked Credentials.bicep,9a0534470c3b57ab5b92995688b5a6062f2d72fa
+sentinelcontent/analytic-rules/MXDR365 - Account Authentication Anomaly_ Significant Volume Increase with High Failure Rate.bicep,1f3dbbf02e207a81137b9591af2082588d7a37cc
+sentinelcontent/analytic-rules/MXDR365 - Advanced Multi-Stage Discovery Operations Detection.bicep,d016ffc464cdb19bc4bd03a971845c74c840ef00
 
