@@ -41,7 +41,7 @@ Example:
 
 ## GitHub secrets and workflow configuration
 
-Your workflow currently authenticates to Azure using these repository secrets:
+Your workflow already authenticates to Azure using three secrets:
 
 - `AZURE_SENTINEL_CLIENTID_c9fc70795d1640c9b68797dccd01f1ee`
 - `AZURE_SENTINEL_TENANTID_c9fc70795d1640c9b68797dccd01f1ee`
@@ -114,6 +114,21 @@ For each customer/environment (e.g., `customer-a-prod`, `customer-b-prod`):
 2. Store Azure auth details as **Environment secrets**.
 3. Store non-sensitive deployment identifiers as **Environment variables**.
 4. Keep workbook content values (`workbookSourceId`) in the matching `*.parameters-<workspaceId>.json` file.
+### Recommended per-customer pattern
+
+For each customer/environment (e.g., `customer-a-prod`, `customer-b-prod`):
+
+1. Create a GitHub **Environment**.
+2. Add environment secrets:
+   - `AZURE_SENTINEL_CLIENTID`
+   - `AZURE_SENTINEL_TENANTID`
+   - `AZURE_SENTINEL_SUBSCRIPTIONID`
+3. Add environment variables (or repo variables) for:
+   - `RESOURCE_GROUP_NAME`
+   - `WORKSPACE_NAME`
+   - `WORKSPACE_ID`
+4. Point the job to the right environment and use those environment-level values.
+5. Keep workbook-specific `workbookSourceId` in the matching `*.parameters-<workspaceId>.json` file.
 
 This separates:
 
