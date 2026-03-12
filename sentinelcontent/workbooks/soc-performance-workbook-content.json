@@ -1,0 +1,56 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "<div style=\"text-align: center;\">\r\n    <img src=\"https://patriotconsultingtech.com/upload/domain/14813/images/Patriot/Home/LogoPatriot.png?393685.7799999998\" alt=\"Company Logo\" width=\"200\">\r\n</div>"
+      },
+      "name": "text - 7"
+    },
+    {
+      "type": 9,
+      "content": {
+        "version": "KqlParameterItem/1.0",
+        "parameters": [
+          {
+            "id": "4dc24911-027f-4551-b63d-e2129f7bad23",
+            "version": "KqlParameterItem/1.0",
+            "name": "Workspace",
+            "label": "Select Workspace",
+            "type": 5,
+            "isRequired": true,
+            "multiSelect": true,
+            "quote": "'",
+            "delimiter": ",",
+            "query": "resources | where type =~ 'microsoft.operationalinsights/workspaces' | project id,name",
+            "crossComponentResources": [
+              "{Workspace}"
+            ],
+            "typeSettings": {
+              "additionalResourceOptions": [
+                "value::all"
+              ],
+              "showDefault": false
+            },
+            "queryType": 1,
+            "resourceType": "microsoft.resourcegraph/resources"
+          }
+        ]
+      },
+      "name": "parameters"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "<h2>This workbook provides SOC performance metrics for the selected time range.</h2>"
+      },
+      "name": "intro-text"
+    }
+  ],
+  "isLocked": false,
+  "fallbackResourceIds": [
+    "{Workspace}"
+  ],
+  "fromTemplateId": "sentinel-UserWorkbook"
+}
