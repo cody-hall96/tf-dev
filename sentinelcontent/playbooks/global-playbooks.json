@@ -2,8 +2,8 @@
   "playbooks": {
     "freshServiceIncidentUpdates": {
       "automationRuleDisplayName": "MXDR365 - FreshService - Incident Updates",
-      "playbookLogicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "playbookTenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
+      "playbookLogicAppResourceId": "/subscriptions/96ab87fb-fd3a-4fcf-aa8e-a87cb20bdde8/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
+      "playbookTenantId": "ab71a6ac-73bf-40a9-bec7-9ca1edfa8c92"
     }
   }
 }
