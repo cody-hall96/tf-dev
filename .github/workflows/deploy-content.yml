@@ -18,7 +18,7 @@ jobs:
 
     env:
       CUSTOMER_FILE: customers/${{ inputs.customerCode }}/customer.json
-      PLAYBOOKS_FILE: global-playbooks.json
+      PLAYBOOKS_FILE: sentinelcontent/playbooks/global-playbooks.json
       WORKBOOK_FILE: sentinelcontent/workbooks/soc-performance-workbook-content.json
       WORKBOOK_BICEP: sentinelcontent/workbooks/patriot-mxdr-performance.bicep
       ANALYTIC_RULE_BICEP: sentinelcontent/analytics/MXDR365 - Keylogger detection.bicep.bicep
