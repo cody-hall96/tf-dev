@@ -1,40 +1,9 @@
 {
   "playbooks": {
     "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
-    }
-    "freshServiceIncidentUpdates": {
-      "logicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
-      "tenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
+      "automationRuleDisplayName": "MXDR365 - FreshService - Incident Updates",
+      "playbookLogicAppResourceId": "/subscriptions/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa/resourceGroups/rg-mxdr-prod/providers/Microsoft.Logic/workflows/Create-FreshService-Ticket",
+      "playbookTenantId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
     }
   }
 }
