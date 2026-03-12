@@ -1,9 +1,8 @@
 {
   "customerCode": "contoso",
   "active": true,
-  "environment": "prod",
   "resourceGroupName": "rg-contoso-sentinel-prod",
   "workspace": "law-contoso-prod",
-  "workspaceResourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-contoso-sentinel-prod/providers/Microsoft.OperationalInsights/workspaces/law-contoso-prod",
-  "workbookId": "xxxxxxxx-5d6f-4f5d-8c49-0ef5e5a11111"
+  "workspaceResourceId": "/subscriptions/.../workspaces/law-contoso-prod",
+  "workbookId": "5e6e2d9d-5d6f-4f5d-8c49-0ef5e5a11111"
 }
