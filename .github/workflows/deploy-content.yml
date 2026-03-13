@@ -21,8 +21,8 @@ jobs:
       PLAYBOOKS_FILE: tf-dev/sentinelcontent/playbooks/global-playbooks.json
       WORKBOOK_FILE: tf-dev/sentinelcontent/workbooks/soc-performance-workbook-content.json
       WORKBOOK_BICEP: tf-dev/sentinelcontent/workbooks/patriot-mxdr-performance.bicep
-      ANALYTIC_RULE_BICEP: tf-dev/sentinelcontent/analytic-rules/MXDR365 - Keylogger detection.bicep.bicep
-      HUNTING_QUERY_BICEP: tf-dev/sentinelcontent/hunting-queries/MXDR365 - AI LLM File Download Activity.bicep.bicep
+      ANALYTIC_RULE_BICEP: tf-dev/sentinelcontent/analytic-rules/MXDR365 - Keylogger detection.bicep
+      HUNTING_QUERY_BICEP: tf-dev/sentinelcontent/hunting-queries/MXDR365 - AI LLM File Download Activity.bicep
       AUTOMATION_RULE_BICEP: tf-dev/sentinelcontent/automation-rules/freshservice-incident-updates.bicep
 
     steps:
