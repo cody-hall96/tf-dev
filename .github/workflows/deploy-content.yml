@@ -29,10 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: List analytic rules
-        run: |
-          ls -l sentinelcontent/analytic-rules
-
       - name: Debug repo files
         run: |
           pwd
