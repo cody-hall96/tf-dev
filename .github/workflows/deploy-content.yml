@@ -17,13 +17,13 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      CUSTOMER_FILE: tf-dev/customers/customer-${{ inputs.customerCode }}/${{ inputs.customerCode }}-config.json
-      PLAYBOOKS_FILE: tf-dev/sentinelcontent/playbooks/global-playbooks.json
-      WORKBOOK_FILE: tf-dev/sentinelcontent/workbooks/soc-performance-workbook-content.json
-      WORKBOOK_BICEP: tf-dev/sentinelcontent/workbooks/patriot-mxdr-performance.bicep
-      ANALYTIC_RULE_BICEP: tf-dev/sentinelcontent/analytic-rules/MXDR365 - Keylogger detection.bicep
-      HUNTING_QUERY_BICEP: tf-dev/sentinelcontent/hunting-queries/MXDR365 - AI LLM File Download Activity.bicep
-      AUTOMATION_RULE_BICEP: tf-dev/sentinelcontent/automation-rules/MXDR365 - FreshService - Incident Updates.bicep
+      CUSTOMER_FILE: customers/customer-${{ inputs.customerCode }}/${{ inputs.customerCode }}-config.json
+      PLAYBOOKS_FILE: sentinelcontent/playbooks/global-playbooks.json
+      WORKBOOK_FILE: sentinelcontent/workbooks/soc-performance-workbook-content.json
+      WORKBOOK_BICEP: sentinelcontent/workbooks/patriot-mxdr-performance.bicep
+      ANALYTIC_RULE_BICEP: sentinelcontent/analytic-rules/MXDR365 - Keylogger detection.bicep
+      HUNTING_QUERY_BICEP: sentinelcontent/hunting-queries/MXDR365 - AI LLM File Download Activity.bicep
+      AUTOMATION_RULE_BICEP: sentinelcontent/automation-rules/MXDR365 - FreshService - Incident Updates.bicep
 
     steps:
       - name: Checkout
