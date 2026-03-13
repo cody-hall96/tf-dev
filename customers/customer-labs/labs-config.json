@@ -1,0 +1,13 @@
+{
+  "customerCode": "labs",
+  "active": true,
+  "tenantId": "0a49f57f-f7a5-4b6d-b6d2-d22d25c84408",
+  "subscriptionId": "fc1b764d-add5-4040-a1bd-5f651004e672",
+  "resourceGroupName": "rg-sentinel",
+  "workspace": "law-sentinel",
+  "workspaceResourceId": "/subscriptions/fc1b764d-add5-4040-a1bd-5f651004e672/resourceGroups/rg-sentinel/providers/Microsoft.OperationalInsights/workspaces/law-sentinel",
+  "workbookId": "5e6e2d9d-5d6f-4f5d-8c49-0ef5e5a11111",
+  "automationRuleIds": {
+    "freshServiceIncidentUpdates": "9f3c0c4e-bc2a-4a53-a2b6-6e2d6d4d9f01"
+  }
+}
