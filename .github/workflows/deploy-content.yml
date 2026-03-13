@@ -135,15 +135,35 @@ jobs:
 
       - name: Deploy workbook
         if: steps.cfg.outputs.skip != 'true'
+        shell: bash
+        env:
+          WORKBOOK_SOURCE_ID: ${{ steps.cfg.outputs.workspace_resource_id }}
+          WORKBOOK_ID: ${{ steps.cfg.outputs.workbook_id }}
+          SERIALIZED_DATA: ${{ steps.cfg.outputs.serialized_data }}
         run: |
+          set -euo pipefail
+
+          jq -n \
+            --arg workbookSourceId "$WORKBOOK_SOURCE_ID" \
+            --arg workbookId "$WORKBOOK_ID" \
+            --arg serializedData "$SERIALIZED_DATA" \
+            '{
+              "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+              contentVersion: "1.0.0.0",
+              parameters: {
+                workbookSourceId: { value: $workbookSourceId },
+                workbookId: { value: $workbookId },
+                serializedData: { value: $serializedData }
+              }
+            }' > workbook.parameters.json
+
+          cat workbook.parameters.json
+
           az deployment group create \
             --resource-group "${{ steps.cfg.outputs.resource_group }}" \
             --name "workbook-${{ steps.cfg.outputs.customer_code }}-${{ github.run_id }}" \
             --template-file "$WORKBOOK_BICEP" \
-            --parameters \
-              workbookSourceId="${{ steps.cfg.outputs.workspace_resource_id }}" \
-              workbookId="${{ steps.cfg.outputs.workbook_id }}" \
-              serializedData='${{ steps.cfg.outputs.serialized_data }}'
+            --parameters @workbook.parameters.json
 
       - name: Deploy automation rule
         if: steps.cfg.outputs.skip != 'true'
