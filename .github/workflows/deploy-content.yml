@@ -29,9 +29,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: List hunting queries
+      - name: List analytic rules
         run: |
-          ls -l sentinelcontent/hunting-queries
+          ls -l sentinelcontent/analytic-rules
 
       - name: Debug repo files
         run: |
