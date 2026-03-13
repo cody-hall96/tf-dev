@@ -29,6 +29,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug repo files
+        run: |
+          pwd
+          find tf-dev -type f | sort
+
       - name: Validate required files exist
         run: |
           test -f "$CUSTOMER_FILE"
@@ -36,6 +41,25 @@ jobs:
           test -f "$WORKBOOK_FILE"
           test -f "$WORKBOOK_BICEP"
           test -f "$AUTOMATION_RULE_BICEP"
+
+      - name: Validate required files exist
+        run: |
+          for f in \
+            "$CUSTOMER_FILE" \
+            "$PLAYBOOKS_FILE" \
+            "$WORKBOOK_FILE" \
+            "$WORKBOOK_BICEP" \
+            "$ANALYTIC_RULE_BICEP" \
+            "$HUNTING_QUERY_BICEP" \
+            "$AUTOMATION_RULE_BICEP"
+          do
+            if [ ! -f "$f" ]; then
+              echo "Missing file: $f"
+              exit 1
+            else
+              echo "Found file: $f"
+            fi
+          done  
 
       - name: Azure login with OIDC
         uses: azure/login@v2
