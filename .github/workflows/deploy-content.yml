@@ -29,6 +29,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: List hunting queries
+        run: |
+          ls -l sentinelcontent/hunting-queries
+
       - name: Debug repo files
         run: |
           pwd
