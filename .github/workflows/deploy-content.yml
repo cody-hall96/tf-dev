@@ -23,7 +23,7 @@ jobs:
       WORKBOOK_BICEP: tf-dev/sentinelcontent/workbooks/patriot-mxdr-performance.bicep
       ANALYTIC_RULE_BICEP: tf-dev/sentinelcontent/analytic-rules/MXDR365 - Keylogger detection.bicep
       HUNTING_QUERY_BICEP: tf-dev/sentinelcontent/hunting-queries/MXDR365 - AI LLM File Download Activity.bicep
-      AUTOMATION_RULE_BICEP: tf-dev/sentinelcontent/automation-rules/freshservice-incident-updates.bicep
+      AUTOMATION_RULE_BICEP: tf-dev/sentinelcontent/automation-rules/MXDR365 - FreshService - Incident Updates.bicep
 
     steps:
       - name: Checkout
