@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       customerCode:
-        description: Customer code folder under customers/
+        description: Customer code
         required: true
         type: string
 
@@ -29,19 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug repo files
-        run: |
-          pwd
-          find tf-dev -type f | sort
-
-      - name: Validate required files exist
-        run: |
-          test -f "$CUSTOMER_FILE"
-          test -f "$PLAYBOOKS_FILE"
-          test -f "$WORKBOOK_FILE"
-          test -f "$WORKBOOK_BICEP"
-          test -f "$AUTOMATION_RULE_BICEP"
-
       - name: Validate required files exist
         run: |
           for f in \
@@ -59,7 +46,7 @@ jobs:
             else
               echo "Found file: $f"
             fi
-          done  
+          done
 
       - name: Azure login with OIDC
         uses: azure/login@v2
@@ -76,6 +63,7 @@ jobs:
 
           CUSTOMER_CODE=$(jq -r '.customerCode' "$CUSTOMER_FILE")
           ACTIVE=$(jq -r '.active' "$CUSTOMER_FILE")
+          SUBSCRIPTION_ID=$(jq -r '.subscriptionId' "$CUSTOMER_FILE")
           RG=$(jq -r '.resourceGroupName' "$CUSTOMER_FILE")
           WORKSPACE=$(jq -r '.workspace' "$CUSTOMER_FILE")
           WORKSPACE_RESOURCE_ID=$(jq -r '.workspaceResourceId' "$CUSTOMER_FILE")
@@ -97,6 +85,7 @@ jobs:
           {
             echo "skip=false"
             echo "customer_code=$CUSTOMER_CODE"
+            echo "subscription_id=$SUBSCRIPTION_ID"
             echo "resource_group=$RG"
             echo "workspace=$WORKSPACE"
             echo "workspace_resource_id=$WORKSPACE_RESOURCE_ID"
@@ -110,12 +99,21 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
+      - name: Switch to customer subscription
+        if: steps.cfg.outputs.skip != 'true'
+        run: |
+          az account list --output table
+          az account set --subscription "${{ steps.cfg.outputs.subscription_id }}"
+          az account show --output table
+
       - name: Show deployment target
         if: steps.cfg.outputs.skip != 'true'
         run: |
           echo "Customer: ${{ steps.cfg.outputs.customer_code }}"
+          echo "Subscription: ${{ steps.cfg.outputs.subscription_id }}"
           echo "Resource group: ${{ steps.cfg.outputs.resource_group }}"
           echo "Workspace: ${{ steps.cfg.outputs.workspace }}"
+          az group show --name "${{ steps.cfg.outputs.resource_group }}" --output table
 
       - name: Deploy analytic rule
         if: steps.cfg.outputs.skip != 'true'
