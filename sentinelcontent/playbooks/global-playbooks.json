@@ -2,6 +2,7 @@
   "playbooks": {
     "testAutomationRulePlaybookReference": {
       "automationRuleDisplayName": "MXDR365 - Test Automation Rule Playbook Reference",
+      "automationRuleId": "5e6e2d9d-5d6f-4f5d-8c49-0ef5e5a11122"
       "playbookLogicAppResourceId": "/subscriptions/32e993b8-ebcd-4bca-98e7-23b6d3639b38/resourceGroups/rg-github-pipeline-test/providers/Microsoft.Logic/workflows/Fresh-Service-Github-Test",
       "playbookTenantId": "73bf1773-9ee6-488f-b898-33c4fbac0041"
     }
