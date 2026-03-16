@@ -23,7 +23,7 @@ jobs:
       WORKBOOK_BICEP: sentinelcontent/workbooks/patriot-mxdr-performance.bicep
       ANALYTIC_RULE_BICEP: sentinelcontent/analytic-rules/MXDR365 - Keylogger detection.bicep
       HUNTING_QUERY_BICEP: sentinelcontent/hunting-queries/MXDR365 - AI LLM File Download Activity.bicep
-      AUTOMATION_RULE_BICEP: sentinelcontent/automation-rules/MXDR365 - FreshService - Incident Updates.bicep
+      AUTOMATION_RULE_BICEP: sentinelcontent/automation-rules/MXDR365 - Test Automation Rule Playbook Reference.bicep
 
     steps:
       - name: Checkout
