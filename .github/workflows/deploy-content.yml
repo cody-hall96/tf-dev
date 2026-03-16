@@ -68,11 +68,11 @@ jobs:
           WORKSPACE=$(jq -r '.workspace' "$CUSTOMER_FILE")
           WORKSPACE_RESOURCE_ID=$(jq -r '.workspaceResourceId' "$CUSTOMER_FILE")
           WORKBOOK_ID=$(jq -r '.workbookId' "$CUSTOMER_FILE")
-          AUTOMATION_RULE_ID=$(jq -r '.automationRuleIds.freshServiceIncidentUpdates' "$CUSTOMER_FILE")
+          AUTOMATION_RULE_ID=$(jq -r '.automationRuleIds.testAutomationRulePlaybookReference' "$CUSTOMER_FILE")
 
-          RULE_DISPLAY_NAME=$(jq -r '.playbooks.freshServiceIncidentUpdates.automationRuleDisplayName' "$PLAYBOOKS_FILE")
-          PLAYBOOK_LOGIC_APP_RESOURCE_ID=$(jq -r '.playbooks.freshServiceIncidentUpdates.playbookLogicAppResourceId' "$PLAYBOOKS_FILE")
-          PLAYBOOK_TENANT_ID=$(jq -r '.playbooks.freshServiceIncidentUpdates.playbookTenantId' "$PLAYBOOKS_FILE")
+          RULE_DISPLAY_NAME=$(jq -r '.playbooks.testAutomationRulePlaybookReference.automationRuleDisplayName' "$PLAYBOOKS_FILE")
+          PLAYBOOK_LOGIC_APP_RESOURCE_ID=$(jq -r '.playbooks.testAutomationRulePlaybookReference.playbookLogicAppResourceId' "$PLAYBOOKS_FILE")
+          PLAYBOOK_TENANT_ID=$(jq -r '.playbooks.testAutomationRulePlaybookReference.playbookTenantId' "$PLAYBOOKS_FILE")
 
           if [ "$ACTIVE" != "true" ]; then
             echo "Customer $CUSTOMER_CODE is inactive. Exiting."
